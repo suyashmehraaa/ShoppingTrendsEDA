@@ -1,0 +1,33 @@
+Segmented univariate analysis involves analyzing a single variable within different segments or categories of another variable. In the provided dataset, you can segment the data based on different categorical variables such as age group, gender, location, etc., and then analyze the distribution of a specific variable within each segment. Here's how you can perform segmented univariate analysis on the dataset:
+
+Choose Segmentation Variables: Identify the categorical variables in the dataset that you want to use for segmentation. For example, you can choose variables like age group, gender, location, etc.
+
+Segment the Data: Split the dataset into different segments based on the chosen segmentation variables. You can use Pandas' groupby() function to group the data by each segment.
+
+Perform Univariate Analysis: For each segment, analyze the distribution of the variable of interest using descriptive statistics, visualizations (e.g., histograms, box plots), or other relevant analysis techniques.
+
+Compare Segments: Compare the distribution of the variable of interest across different segments to identify any patterns, differences, or trends. You can use visualizations or summary statistics to compare the distributions.
+
+Here's an example of how you can perform segmented univariate analysis on the 'Purchase Amount (USD)' column segmented by 'Age Group':
+
+python
+Copy code
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Segment the data by 'Age Group'
+segmented_data = data.groupby('Age Group')
+
+# Perform univariate analysis for each segment
+for age_group, group_data in segmented_data:
+    plt.figure(figsize=(8, 6))
+    sns.histplot(group_data['Purchase Amount (USD)'], kde=True)
+    plt.title(f'Distribution of Purchase Amount (USD) - {age_group}')
+    plt.xlabel('Purchase Amount (USD)')
+    plt.ylabel('Frequency')
+    plt.show()
+This code will create separate histograms of the 'Purchase Amount (USD)' distribution for each age group segment. You can similarly perform analysis for other segmentation variables in the dataset. Adjust the analysis techniques and visualizations based on the characteristics of the variable and the insights you want to gain from the analysis.
+
+
+
+

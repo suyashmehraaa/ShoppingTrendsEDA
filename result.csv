@@ -1,0 +1,5 @@
+,Age,Purchase Amount (USD),Review Rating,Previous Purchases
+Age,1,-0.010423647,-0.021949148,0.040444531
+Purchase Amount (USD),-0.010423647,1,0.030775923,0.008063412
+Review Rating,-0.021949148,0.030775923,1,0.004229099
+Previous Purchases,0.040444531,0.008063412,0.004229099,1
